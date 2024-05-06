@@ -17,7 +17,7 @@ func MetainfoTest(connection string) func() error {
 	expire := time.Now().Add(time.Hour)
 
 	metabaseDB, err := metabase.Open(ctx, log.Named("metabase"), connection, metabase.Config{
-		ApplicationName:  "stbb",
+		ApplicationName:  "k6",
 		MaxNumberOfParts: 10,
 	})
 	if err != nil {
