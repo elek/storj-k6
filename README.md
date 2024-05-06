@@ -12,3 +12,9 @@ xk6 build --with github.com/elek/storj-k6=.
 
 ./k6 run examples/simple.js
 ```
+
+### Create image
+
+```
+docker buildx bake image --push
+```
