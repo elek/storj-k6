@@ -37,8 +37,9 @@ func (mi *ModuleInstance) Exports() modules.Exports {
 	return modules.Exports{
 		Default: MetainfoTest,
 		Named: map[string]interface{}{
-			"MetainfoTest": MetainfoTest,
-			"UplinkTest":   UplinkTest,
+			"MetainfoTest":   MetainfoTest,
+			"UplinkTest":     UplinkTest,
+			"BeginObjectRPC": NewBeginObject,
 		},
 	}
 }
