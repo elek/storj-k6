@@ -10,6 +10,8 @@ RUN --mount=type=cache,target=/root/.cache/go-build,id=gobuild \
     xk6 build --with github.com/elek/storj-k6=.
 
 FROM alpine as image
+RUN apk add --update micro bash
 WORKDIR /root
 COPY --from=build /storj-k6 /usr/local/bin
 COPY examples/*.js .
+COPY once.sh .
